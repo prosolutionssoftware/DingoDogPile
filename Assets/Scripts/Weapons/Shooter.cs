@@ -25,15 +25,14 @@ public class Shooter : MonoBehaviour {
 
             if (player.isFacingRight)
             {
-                Rigidbody2D 'Instance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-                'Instance.velocity = new Vector2(speed, 0);
+                Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
+                bulletInstance.velocity = new Vector2(speed, 0);
             }
             else 
             {
-                Rigidbody2D 'Instance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 180f))) as Rigidbody2D;
-                'Instance.velocity = new Vector2(-speed, 0);                    
+                Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 180f))) as Rigidbody2D;
+                bulletInstance.velocity = new Vector2(-speed, 0);                    
             }
         }    
     }
-
 }
